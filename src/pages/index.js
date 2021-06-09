@@ -26,7 +26,7 @@ const CartExample = () => {
         stripe={stripePromise}
         successUrl={`${url}/page-2/`}
         cancelUrl={`${url}/`}
-        currency="USD"
+        currency="GBP"
         allowedCountries={["GB"]}
         billingAddressCollection={true}
       >
