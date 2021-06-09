@@ -11,27 +11,30 @@ import { CartProvider } from "use-shopping-cart"
 
 const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY)
 
-const CartExample = () => (
-  <Layout>
-    <SEO title="Cart Example" />
-    <h1>Checkout with cart example</h1>
-    <h2>
-      With{" "}
-      <a href="https://use-shopping-cart.netlify.app/">use-shopping-cart</a>
-    </h2>
-    <CartProvider
-      mode="client-only"
-      stripe={stripePromise}
-      successUrl={`${window?.location.origin}/page-2/`}
-      cancelUrl={`${window?.location.origin}/`}
-      currency="USD"
-      allowedCountries={["GB"]}
-      billingAddressCollection={true}
-    >
-      <CartOverview />
-      <Skus />
-    </CartProvider>
-  </Layout>
-)
+const CartExample = () => {
+  const url = typeof window !== "undefined" ? window.location.href : ""
+  return (
+    <Layout>
+      <SEO title="Cart Example" />
+      <h1>Checkout with cart example</h1>
+      <h2>
+        With{" "}
+        <a href="https://use-shopping-cart.netlify.app/">use-shopping-cart</a>
+      </h2>
+      <CartProvider
+        mode="client-only"
+        stripe={stripePromise}
+        successUrl={`${url}/page-2/`}
+        cancelUrl={`${url}/`}
+        currency="USD"
+        allowedCountries={["GB"]}
+        billingAddressCollection={true}
+      >
+        <CartOverview />
+        <Skus />
+      </CartProvider>
+    </Layout>
+  )
+}
 
 export default CartExample
