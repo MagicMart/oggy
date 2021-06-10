@@ -12,7 +12,7 @@ import { CartProvider } from "use-shopping-cart"
 const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY)
 
 const CartExample = () => {
-  const url = typeof window !== "undefined" ? window.location.href : ""
+  const url = typeof window !== "undefined" ? window.location.origin : ""
   return (
     <Layout>
       <SEO title="Cart Example" />
