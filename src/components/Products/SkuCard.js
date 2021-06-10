@@ -15,9 +15,9 @@ const cardStyles = {
   maxWidth: "300px",
 }
 const buttonStyles = {
-  fontSize: "13px",
+  fontSize: "1rem",
   textAlign: "center",
-  color: "#fff",
+  color: "black",
   outline: "none",
   padding: "12px",
   boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
