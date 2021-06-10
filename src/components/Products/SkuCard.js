@@ -31,7 +31,7 @@ const SkuCard = ({ sku }) => {
 
   return (
     <div style={cardStyles}>
-      <img src={sku.image} alt="" />
+      <img src={sku.image} alt={sku.description} />
       <h4>{sku.name}</h4>
       <p>
         Price:{" "}
@@ -40,6 +40,7 @@ const SkuCard = ({ sku }) => {
           currency: sku.currency,
         })}
       </p>
+      <p>{sku.description}</p>
       <button style={buttonStyles} onClick={() => addItem(sku)}>
         ADD TO CART
       </button>
