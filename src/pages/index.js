@@ -16,11 +16,7 @@ const CartExample = () => {
   return (
     <Layout>
       <SEO title="Cart Example" />
-      <h1>Checkout with cart example</h1>
-      <h2>
-        With{" "}
-        <a href="https://use-shopping-cart.netlify.app/">use-shopping-cart</a>
-      </h2>
+      <h1>Clothes line</h1>
       <CartProvider
         mode="client-only"
         stripe={stripePromise}
