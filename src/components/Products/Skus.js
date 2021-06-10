@@ -15,7 +15,11 @@ export default props => (
     query={graphql`
       query ProductPrices {
         prices: allStripePrice(
-          filter: { active: { eq: true }, currency: { eq: "gbp" } }
+          filter: {
+            active: { eq: true }
+            product: { active: { eq: true } }
+            currency: { eq: "gbp" }
+          }
           sort: { fields: [unit_amount] }
         ) {
           edges {
@@ -38,7 +42,6 @@ export default props => (
     render={({ prices }) => (
       <div style={conatinerStyles}>
         {prices.edges.map(({ node: price }) => {
-          if (!price.product.active) return
           const newSku = {
             sku: price.id,
             name: price.product.name,
