@@ -10,7 +10,7 @@ const conatinerStyles = {
   padding: "1rem 0 1rem 0",
 }
 
-export default props => (
+const Skus = props => (
   <StaticQuery
     query={graphql`
       query ProductPrices {
@@ -57,3 +57,5 @@ export default props => (
     )}
   />
 )
+
+export default Skus
