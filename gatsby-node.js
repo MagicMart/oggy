@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+// https://github.com/dayhaysoos/use-shopping-cart/issues/184
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 exports.onCreateWebpackConfig = ({ actions }) => {
