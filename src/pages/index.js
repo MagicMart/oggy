@@ -1,21 +1,22 @@
 import React from "react"
+import "@stripe/stripe-js"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import Skus from "../components/Products/Skus"
 import CartOverview from "../components/CartOverview"
 
-import { loadStripe } from "@stripe/stripe-js"
 import { CartProvider } from "use-shopping-cart"
+import getStripe from "../utils/stripejs"
 
-const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY)
+const stripePromise = getStripe()
 
 const CartExample = () => {
   const url = typeof window !== "undefined" ? window.location.origin : ""
   return (
     <Layout>
-      <SEO title="Cart Example" />
+      <Seo title="Cart Example" />
       <h1>Clothes line</h1>
       <CartProvider
         mode="client-only"
