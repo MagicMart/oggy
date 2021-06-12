@@ -12,7 +12,7 @@ const cardStyles = {
   boxShadow: "5px 5px 25px 0 rgba(46,61,73,.2)",
   backgroundColor: "#fff",
   borderRadius: "6px",
-  maxWidth: "300px",
+  maxWidth: "200px",
 }
 const buttonStyles = {
   fontSize: "1rem",
@@ -28,7 +28,6 @@ const buttonStyles = {
 
 const SkuCard = ({ sku }) => {
   const { addItem } = useShoppingCart()
-
   return (
     <div style={cardStyles}>
       <img src={sku.image} alt={sku.description} />

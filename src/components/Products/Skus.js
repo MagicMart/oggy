@@ -44,7 +44,7 @@ const Skus = props => (
       <div style={conatinerStyles}>
         {prices.edges.map(({ node: price }) => {
           const newSku = {
-            sku: price.id,
+            id: price.id,
             name: price.product.name,
             price: price.unit_amount,
             currency: price.currency,
