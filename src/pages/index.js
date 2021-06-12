@@ -21,7 +21,7 @@ const CartExample = () => {
       <CartProvider
         mode="client-only"
         stripe={stripePromise}
-        successUrl={`${url}/page-2/`}
+        successUrl={`${url}/success/`}
         cancelUrl={`${url}/`}
         currency="GBP"
         allowedCountries={["GB"]}
