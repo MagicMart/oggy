@@ -11,12 +11,16 @@ import getStripe from "../utils/stripejs"
 
 const stripePromise = getStripe()
 
+const cartContainerStyles = {
+  display: "flex",
+  justifyContent: "space-between",
+}
+
 const CartExample = () => {
   const url = typeof window !== "undefined" ? window.location.origin : ""
   return (
     <Layout>
       <Seo title="Cart Example" />
-      <h1>Clothes line</h1>
       <CartProvider
         mode="client-only"
         stripe={stripePromise}
@@ -26,7 +30,10 @@ const CartExample = () => {
         allowedCountries={["GB"]}
         billingAddressCollection={true}
       >
-        <CartOverview />
+        <div style={cartContainerStyles}>
+          <h1 style={{ color: "#0e5e83" }}>Oggy Clothes UK</h1>
+          <CartOverview />
+        </div>
         <Skus />
       </CartProvider>
     </Layout>

@@ -31,8 +31,8 @@ const SkuCard = ({ sku }) => {
   return (
     <div style={cardStyles}>
       <img src={sku.image} alt={sku.description} />
-      <h4>{sku.name}</h4>
-      <p>
+      <h2 style={{ fontSize: "1rem" }}>{sku.name}</h2>
+      <p style={{ fontWeight: "bold" }}>
         Price:{" "}
         {formatCurrencyString({
           value: parseInt(sku.price),
