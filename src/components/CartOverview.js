@@ -33,7 +33,7 @@ const Cart = () => {
       {/* Redirects the user to Stripe */}
       <button
         style={buttonStyles}
-        disabled={loading}
+        disabled={loading || cartCount === 0}
         onClick={() => {
           setLoading(true)
           redirectToCheckout()
