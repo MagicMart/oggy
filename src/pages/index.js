@@ -1,6 +1,4 @@
 import React from "react"
-import "@stripe/stripe-js"
-import "normalize.css"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"

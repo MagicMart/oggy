@@ -8,8 +8,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import "@stripe/stripe-js"
 
 import Header from "./header"
+import "normalize.css"
 import "./layout.css"
 
 const Layout = ({ children }) => {
