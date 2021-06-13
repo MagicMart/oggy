@@ -2,6 +2,18 @@ import React, { useState } from "react"
 
 import { useShoppingCart } from "use-shopping-cart"
 
+const cartContainerStyles = {
+  display: "flex",
+  justifyContent: "flex-end",
+}
+
+const cartStyles = {
+  border: "2px solid #0e5e83",
+  borderRadius: "10%",
+  width: "fit-content",
+  padding: "1rem",
+}
+
 const buttonStyles = {
   fontSize: "1rem",
   textAlign: "center",
@@ -25,25 +37,30 @@ const Cart = () => {
   } = useShoppingCart()
 
   return (
-    <div>
-      {/* This is where we'll render our cart */}
-      <p>Number of Items: {cartCount}</p>
-      <p>Total: {formattedTotalPrice}</p>
-
-      {/* Redirects the user to Stripe */}
-      <button
-        style={buttonStyles}
-        disabled={loading || cartCount === 0}
-        onClick={() => {
-          setLoading(true)
-          redirectToCheckout()
-        }}
-      >
-        {loading ? "Loading..." : "Checkout"}
-      </button>
-      <button style={buttonStyles} onClick={clearCart}>
-        Clear cart
-      </button>
+    <div style={cartContainerStyles}>
+      <div style={cartStyles}>
+        {/* This is where we'll render our cart */}
+        <p>
+          Number of Items: <span style={{ fontSize: "2rem" }}>{cartCount}</span>
+        </p>
+        <p>
+          Total: <span style={{ fontSize: "2rem" }}>{formattedTotalPrice}</span>
+        </p>
+        {/* Redirects the user to Stripe */}
+        <button
+          style={buttonStyles}
+          disabled={loading || cartCount === 0}
+          onClick={() => {
+            setLoading(true)
+            redirectToCheckout()
+          }}
+        >
+          {loading ? "Loading..." : "Checkout"}
+        </button>{" "}
+        <button style={buttonStyles} onClick={clearCart}>
+          Clear cart
+        </button>
+      </div>
     </div>
   )
 }
