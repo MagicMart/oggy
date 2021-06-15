@@ -6,7 +6,7 @@ const conatinerStyles = {
   display: "flex",
   flexDirection: "row",
   flexWrap: "wrap",
-  justifyContent: "space-between",
+  justifyContent: "space-around",
   padding: "1rem 0 1rem 0",
 }
 

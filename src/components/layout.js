@@ -11,8 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import "@stripe/stripe-js"
 
 import Header from "./header"
-import "normalize.css"
 import "./layout.css"
+import "normalize.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
