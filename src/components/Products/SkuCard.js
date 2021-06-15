@@ -2,37 +2,15 @@ import React from "react"
 
 import { useShoppingCart, formatCurrencyString } from "use-shopping-cart"
 
-const cardStyles = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-around",
-  alignItems: "flex-start",
-  padding: "1rem",
-  marginBottom: "1rem",
-  boxShadow: "5px 5px 25px 0 rgba(46,61,73,.2)",
-  backgroundColor: "#fff",
-  borderRadius: "6px",
-  maxWidth: "200px",
-}
-const buttonStyles = {
-  fontSize: "1rem",
-  textAlign: "center",
-  color: "black",
-  outline: "none",
-  padding: "12px",
-  boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-  backgroundColor: "rgb(255, 178, 56)",
-  borderRadius: "6px",
-  letterSpacing: "1.5px",
-}
+import { skucard, button, price } from "../../styles/skucard.module.css"
 
 const SkuCard = ({ sku }) => {
   const { addItem } = useShoppingCart()
   return (
-    <div style={cardStyles}>
+    <div className={skucard}>
       <img src={sku.image} alt={sku.description} />
-      <h2 style={{ fontSize: "1rem" }}>{sku.name}</h2>
-      <p style={{ fontWeight: "bold" }}>
+      <h2>{sku.name}</h2>
+      <p className={price}>
         Price:{" "}
         {formatCurrencyString({
           value: parseInt(sku.price),
@@ -40,7 +18,7 @@ const SkuCard = ({ sku }) => {
         })}
       </p>
       <p>{sku.description}</p>
-      <button style={buttonStyles} onClick={() => addItem(sku)}>
+      <button className={button} onClick={() => addItem(sku)}>
         ADD TO CART
       </button>
     </div>
