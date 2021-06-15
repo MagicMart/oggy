@@ -13,6 +13,7 @@ const stripePromise = getStripe()
 
 const cartContainerStyles = {
   display: "flex",
+  flexWrap: "wrap",
   justifyContent: "space-between",
 }
 
@@ -31,7 +32,9 @@ const CartExample = () => {
         billingAddressCollection={true}
       >
         <div style={cartContainerStyles}>
-          <h1 style={{ color: "#0e5e83" }}>Oggy Clothes UK</h1>
+          <h1 style={{ fontSize: "1.7rem", color: "#0e5e83" }}>
+            Oggy Clothes UK
+          </h1>
           <CartOverview />
         </div>
         <Skus />
