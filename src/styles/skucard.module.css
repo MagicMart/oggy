@@ -29,7 +29,7 @@
   background-color: rgb(255, 178, 56);
   border-radius: 6px;
   letter-spacing: 1.5px;
-  box-shadow: 0 4px #999;
+  box-shadow: 0 8px #999;
 }
 
 .button:hover {
@@ -39,6 +39,7 @@
 
 .button:active {
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  color: white;
+  box-shadow: 0 3px #666;
+  transform: translateY(5px);
 }
