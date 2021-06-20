@@ -24,31 +24,6 @@ const SkucardStyles = styled.div`
   .price {
     font-weight: bold;
   }
-
-  .button {
-    font-size: 2rem;
-    text-align: center;
-    color: black;
-    outline: none;
-    padding: 12px;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
-    background-color: rgb(255, 178, 56);
-    border-radius: 6px;
-    letter-spacing: 1.5px;
-    box-shadow: 0 8px #999;
-  }
-
-  .button:hover {
-    background-color: bisque;
-    cursor: pointer;
-  }
-
-  .button:active {
-    background-color: #3e8e41;
-    color: white;
-    box-shadow: 0 3px #666;
-    transform: translateY(5px);
-  }
 `
 
 const SkuCard = ({ sku }) => {
@@ -65,9 +40,7 @@ const SkuCard = ({ sku }) => {
         })}
       </p>
       <p>{sku.description}</p>
-      <button className="button" onClick={() => addItem(sku)}>
-        ADD TO CART
-      </button>
+      <button onClick={() => addItem(sku)}>ADD TO CART</button>
     </SkucardStyles>
   )
 }

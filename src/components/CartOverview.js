@@ -14,18 +14,6 @@ const cartStyles = {
   padding: "2rem",
 }
 
-const buttonStyles = {
-  fontSize: "1.5rem",
-  textAlign: "center",
-  color: "black",
-  outline: "none",
-  padding: "12px",
-  boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-  backgroundColor: "rgb(255, 178, 56)",
-  borderRadius: "6px",
-  letterSpacing: "1.5px",
-}
-
 const Cart = () => {
   const [loading, setLoading] = useState(false)
   /* Gets the totalPrice and a method for redirecting to stripe */
@@ -48,7 +36,6 @@ const Cart = () => {
         </p>
         {/* Redirects the user to Stripe */}
         <button
-          style={buttonStyles}
           disabled={loading || cartCount === 0}
           onClick={() => {
             setLoading(true)
@@ -57,9 +44,7 @@ const Cart = () => {
         >
           {loading ? "Loading..." : "Checkout"}
         </button>{" "}
-        <button style={buttonStyles} onClick={clearCart}>
-          Clear cart
-        </button>
+        <button onClick={clearCart}>Clear cart</button>
       </div>
     </div>
   )

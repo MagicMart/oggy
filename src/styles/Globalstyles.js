@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     border-width: 1px;
   }
 
-  button {
+  /* button {
     background: var(--red);
     color: white;
     border: 0;
@@ -35,7 +35,41 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       --cast: 4px;
     }
+  } */
+
+    button {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    outline: none;
+    padding: 0.6rem 1rem;
+    background-color: rgb(255, 178, 56);
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px #999;
+    &:hover {
+        background-color: bisque;
+    }
+    &:active {
+        background-color: #3e8e41;
+        color: white;
+        box-shadow: 0 3px #666;
+        transform: translateY(5px);
+    }
   }
+
+  /* button:hover {
+    background-color: bisque;
+    cursor: pointer;
+  } */
+
+  /* button:active {
+    background-color: #3e8e41;
+    color: white;
+    box-shadow: 0 3px #666;
+    transform: translateY(5px);
+  } */
 
   /* Scrollbar Styles */
   body::-webkit-scrollbar {
