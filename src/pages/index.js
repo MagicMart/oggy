@@ -32,7 +32,7 @@ const CartExample = () => {
         billingAddressCollection={true}
       >
         <div style={cartContainerStyles}>
-          <h1 style={{ fontSize: "1.7rem", color: "#0e5e83" }}>
+          <h1 style={{ fontSize: "3rem", color: "#0e5e83" }}>
             Oggy Clothes UK
           </h1>
           <CartOverview />

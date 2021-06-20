@@ -11,11 +11,11 @@ const cartStyles = {
   border: "2px solid #0e5e83",
   borderRadius: "10%",
   width: "fit-content",
-  padding: "1rem",
+  padding: "2rem",
 }
 
 const buttonStyles = {
-  fontSize: "1rem",
+  fontSize: "1.5rem",
   textAlign: "center",
   color: "black",
   outline: "none",
@@ -41,10 +41,10 @@ const Cart = () => {
       <div style={cartStyles}>
         {/* This is where we'll render our cart */}
         <p>
-          Number of Items: <span style={{ fontSize: "2rem" }}>{cartCount}</span>
+          Number of Items: <span style={{ fontSize: "3rem" }}>{cartCount}</span>
         </p>
         <p>
-          Total: <span style={{ fontSize: "2rem" }}>{formattedTotalPrice}</span>
+          Total: <span style={{ fontSize: "3rem" }}>{formattedTotalPrice}</span>
         </p>
         {/* Redirects the user to Stripe */}
         <button

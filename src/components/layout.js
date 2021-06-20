@@ -11,7 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import "@stripe/stripe-js"
 
 import Header from "./header"
-import "./layout.css"
+import GlobalStyles from "../styles/Globalstyles"
+import Typography from "../styles/Typography"
 import "normalize.css"
 
 const Layout = ({ children }) => {
@@ -27,6 +28,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyles />
+      <Typography />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
