@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Oggy`,
-    description: `Great clothes to buy`,
+    title: `Mart's Shop`,
+    description: `Demo shopping site made with Gatsby.js and Stripe`,
     author: `@gatsbyjs`,
   },
   plugins: [

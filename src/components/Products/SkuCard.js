@@ -21,8 +21,16 @@ const SkucardStyles = styled.div`
     font-size: 2rem;
   }
 
+  p {
+    margin: 0 0 1rem;
+  }
+
   .price {
     font-weight: bold;
+  }
+
+  .description {
+    font-size: 1.7rem;
   }
 `
 
@@ -39,7 +47,7 @@ const SkuCard = ({ sku }) => {
           currency: sku.currency,
         })}
       </p>
-      <p>{sku.description}</p>
+      <p className="description">{sku.description}</p>
       <button onClick={() => addItem(sku)}>ADD TO CART</button>
     </SkucardStyles>
   )

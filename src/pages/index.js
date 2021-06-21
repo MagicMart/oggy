@@ -33,7 +33,7 @@ const CartExample = () => {
       >
         <div style={cartContainerStyles}>
           <h1 style={{ fontSize: "3rem", color: "#0e5e83" }}>
-            Oggy Clothes UK
+            Demo shopping site
           </h1>
           <CartOverview />
         </div>
