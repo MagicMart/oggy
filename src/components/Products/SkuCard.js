@@ -17,6 +17,11 @@ const SkucardStyles = styled.div`
   border-radius: 6px;
   max-width: 200px;
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
   h2 {
     font-size: 2rem;
   }
@@ -38,12 +43,7 @@ const SkuCard = ({ sku }) => {
   const { addItem } = useShoppingCart()
   return (
     <SkucardStyles>
-      <img
-        src={sku.image}
-        alt={sku.description}
-        width="inherit"
-        height="auto"
-      />
+      <img src={sku.image} alt={sku.description} width="200" height="200" />
       <h2>{sku.name}</h2>
       <p className="price">
         Price:{" "}
