@@ -38,7 +38,12 @@ const SkuCard = ({ sku }) => {
   const { addItem } = useShoppingCart()
   return (
     <SkucardStyles>
-      <img src={sku.image} alt={sku.description} />
+      <img
+        src={sku.image}
+        alt={sku.description}
+        width="inherit"
+        height="auto"
+      />
       <h2>{sku.name}</h2>
       <p className="price">
         Price:{" "}
